@@ -1,0 +1,91 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    overflow: hidden;
+    transition: background 0.8s;
+}
+
+body.noite {
+    background: #202124;
+}
+
+#jogo {
+    position: relative;
+    width: 900px;
+    height: 300px;
+}
+
+#canvas {
+    width: 900px;
+    height: 300px;
+    display: block;
+    image-rendering: pixelated;
+}
+
+#titulo {
+    position: absolute;
+    top: 8px;
+    left: 15px;
+    z-index: 5;
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 16px;
+    color: #535353;
+}
+
+#placar {
+    position: absolute;
+    top: 8px;
+    right: 15px;
+    z-index: 5;
+    display: flex;
+    gap: 18px;
+    font-family: monospace;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #535353;
+}
+
+body.noite #titulo,
+body.noite #placar {
+    color: #fff;
+}
+
+#gameOver {
+    position: absolute;
+    inset: 0;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 28px;
+    color: #535353;
+}
+
+body.noite #gameOver {
+    color: #fff;
+}
+
+#gameOver.mostrar {
+    display: flex;
+}
+
+#reiniciar {
+    margin-top: 10px;
+    border: none;
+    background: transparent;
+    color: inherit;
+    font-size: 40px;
+    cursor: pointer;
+}
